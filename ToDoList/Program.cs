@@ -18,9 +18,8 @@ namespace idkSomething {
       }
       else if (AddOrView == "view" || AddOrView == "View")
       {
-        foreach (Item task in Item.GetAll())
-        Console.WriteLine(task.GetDescription());
-        Main();
+        Item.WriteToConsole();
+        //Main();
       }
     }
   }

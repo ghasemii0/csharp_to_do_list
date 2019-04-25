@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 namespace ToDoList.Models
@@ -31,6 +32,16 @@ namespace ToDoList.Models
     public static void ClearAll()
     {
       _instances.Clear();
+    }
+
+    public static void WriteToConsole()
+    {
+      List<Item> printList = Item.GetAll();
+
+      foreach (Item thisItem in printList)
+      {
+        Console.WriteLine(thisItem.GetDescription());
+      }
     }
 
   }
